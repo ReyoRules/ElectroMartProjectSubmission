@@ -66,16 +66,16 @@
 
     <script>
         const products = [
-            { id: 1, name: "Laptop Pro X15", price: 99999, category: "Laptop", image: "images/laptop.jpg" },
-            { id: 2, name: "Gaming Mouse RGB", price: 2499, category: "Mouse", image: "images/mouse.jpg" },
-            { id: 3, name: "Mechanical Keyboard", price: 5999, category: "Keyboard", image: "images/keyboard.jpg" },
-            { id: 4, name: "Wireless Headset", price: 3999, category: "Headset", image: "images/headset.jpg" },
-            { id: 5, name: "Game Controller X", price: 3499, category: "Controller", image: "images/controller.jpg" },
-            { id: 6, name: "USB-C Hub", price: 1999, category: "Accessories", image: "images/usb-hub.jpg" },
-            { id: 7, name: "External Hard Drive 1TB", price: 4499, category: "Accessories", image: "images/harddrive.jpg" },
-            { id: 8, name: "Portable Bluetooth Speaker", price: 2999, category: "Accessories", image: "images/speaker.jpg" },
-            { id: 9, name: "Laptop Cooling Pad", price: 1599, category: "Accessories", image: "images/cooling-pad.jpg" },
-            { id: 10, name: "Smartwatch Pro", price: 8999, category: "Accessories", image: "images/smartwatch.jpg" }
+            { id: 1, name: "Laptop Pro X15", price: 99999, category: "Laptop", image: "images/laptop.jpg", link: "images/laptop.jpg" },
+            { id: 2, name: "Gaming Mouse RGB", price: 2499, category: "Mouse", image: "images/mouse.jpg", link: "images/mouse.jpg" },
+            { id: 3, name: "Mechanical Keyboard", price: 5999, category: "Keyboard", image: "images/keyboard.jpg", link: "images/keyboard.jpg" },
+            { id: 4, name: "Wireless Headset", price: 3999, category: "Headset", image: "images/headset.jpg", link: "images/headset.jpg" },
+            { id: 5, name: "Game Controller X", price: 3499, category: "Controller", image: "images/controller.jpg", link: "images/controller.jpg" },
+            { id: 6, name: "USB-C Hub", price: 1999, category: "Accessories", image: "images/usb-hub.jpg", link: "images/usb-hub.jpg" },
+            { id: 7, name: "External Hard Drive 1TB", price: 4499, category: "Accessories", image: "images/harddrive.jpg", link: "images/harddrive.jpg" },
+            { id: 8, name: "Portable Bluetooth Speaker", price: 2999, category: "Accessories", image: "images/speaker.jpg", link: "images/speaker.jpg" },
+            { id: 9, name: "Laptop Cooling Pad", price: 1599, category: "Accessories", image: "images/cooling-pad.jpg", link: "images/cooling-pad.jpg" },
+            { id: 10, name: "Smartwatch Pro", price: 8999, category: "Accessories", image: "images/smartwatch.jpg", link: "images/smartwatch.jpg" }
         ];
 
         const container = document.getElementById('product-list');
@@ -83,7 +83,9 @@
             const div = document.createElement('div');
             div.classList.add('product');
             div.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
+                <a href="${product.link}" target="_blank">
+                    <img src="${product.image}" alt="${product.name}">
+                </a>
                 <h3>${product.name}</h3>
                 <p>₹${product.price}</p>
                 <button>Add to Cart</button>
